@@ -1,0 +1,125 @@
+
+{
+    "FormName" : "Stuart's Sample Form - Future Schema to be supported",    
+    "Schema" : 
+    [
+    {   
+        "name" : "Full Name", 
+        "type" : "TextInput",         
+        "label": "Full Name",
+        "required" : true,
+        "validation" : [
+            {
+                "type" : "regex",
+                "expression" : "(.*)\\s(.*)",
+                "message" :  "Please enter your full name"
+            },
+            {
+                "type" : "required",              
+                "message" :  "Your Name is required"
+            }
+        ]        
+    },
+    {
+        "type" : "TextInput",
+        "name" : "DOB",
+        "label": "Date of Birth",
+        "required" : true,
+        "validation" : [
+            {
+                "type" : "/over 18/",
+                "expression" : ";ds;lfkd",
+                "message" :  "Please enter your full name"
+            },
+            {
+                "type" : "required",                
+                "message" :  "Please full name"
+            }
+        ]        
+    },
+    
+
+    {
+        "name" : "Gender",
+        "type" : "Checkbox",
+        "label" : "Gender",
+        "labelOptions" : ["Male", "Female"]          
+    },
+                     
+    {
+        "name" : "MobilePhone",
+        "type" : "TextInput",
+        "label" : "Mobile",
+        "validation" : [
+            {
+                "type" : "regex",
+                "expression" : ";ds;lfkd",
+                "message" :  "Please enter your full name"
+            }
+        ]
+    },
+            {
+                "name" : "HomePhone",
+                "type" : "TextInput",
+                "label" : "Home",
+                "validation" : [
+                    {
+                        "type" : "regex",
+                        "expression" : ";ds;lfkd",
+                        "message" :  "Please enter your full name"
+                    }
+                ]
+            }                
+          ,             
+    
+     {
+        "name" : "Gaurdian",
+            "type" : "Checkbox",
+            "label" : "Guardian consent",           
+            "validation" : [
+                {
+                    "type" : "required",              
+                    "message" :  "Please enter your full name",
+                    "dependencies" : ["guardianName", "guardianContact" ]
+                }
+            ]
+        },
+        {
+            "name": "Guardian Name",
+            "type" : "TextInput",
+            "label": "Guardian Name",
+            "required" : true,
+            "validation" : [
+                {
+                    "type" : "regex",
+                    "expression" : "//",
+                    "message" :  "Please enter your full name"
+                },
+                {
+                    "type" : "required",
+                    "expression" : ";ds;lfkd",
+                    "message" :  "Please full name"
+                }
+            ]        
+        },
+        {
+            "name": "Guardian Contact",
+            "type" : "TextInput",
+            "label": "Contact Number",
+            "required" : true,
+            "validation" : [
+                {
+                    "type" : "regex",
+                    "expression" : "//",
+                    "message" :  "Please enter your full name"
+                },
+                {
+                    "type" : "required",
+                    "expression" : ";ds;lfkd",
+                    "message" :  "Please full name"
+                }
+            ]        
+        }
+            
+    ]
+}

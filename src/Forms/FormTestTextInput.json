@@ -1,0 +1,48 @@
+
+{
+    "FormName" : "Stuart's Sample Form",
+    "Schema" : 
+    [
+    {    
+        "type" : "TextInput",         
+        "label": "Full Name",
+        "name" : "Full Name",
+        "placeholder" : "Please enter your name",   
+        "required" : true,    
+        "validation" : [
+            {
+                "type" : "regex",
+                "expression" : "(.*)\\s(.*)",
+                "message" :  "Please enter your first and last name"
+            },
+            {
+                "type" : "required",               
+                "message" :  "Please full name"
+            }
+        ]        
+    },
+    {
+        "type" : "TextInput",
+        "name" : "DOB",
+        "label": "Date of Birth",
+        "placeholder" : "Please enter date of birth",   
+        "required" : true,
+        "validation" : [           
+            {
+                "type" : "age",                
+                "low" : 18,               
+                "message" :  "Your must be over 18"
+            },
+            {
+                "type" : "required",                
+                "message" :  "Please enter a date"
+            },
+            {
+                "type" : "regex",
+                "expression" : "^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\\d\\d$",
+                "message" :  "Please enter a date in the format dd/mm/yyyy"
+            }
+        ]        
+    }                          
+    ]
+}
